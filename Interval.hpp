@@ -16,5 +16,10 @@ class Interval {
     this->start = start;
     this->end = end;
   }
+
+  bool operator<(Interval const & other) const {
+    if(start == other.start) return end < other.end;
+    return start < other.start;
+  }
 };
 #endif
